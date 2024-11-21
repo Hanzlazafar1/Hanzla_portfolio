@@ -1,0 +1,18 @@
+{
+  "IntroSection": {
+    "hello_im": "Hi, my name is",
+    "name": "Hanzla Zafar",
+    "short_intro": " Where Creativity Meets Intelligence.",
+    "download_cv": "Download CV"
+  },
+  "SectionName": {
+    "about": "About me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "AboutSection": {
+  "desc": "Hello, I’m Hanzla Zafar, a Software Engineering student and an aspiring Data Scientist with a passion for crafting innovative, data-driven solutions. My expertise lies in Machine Learning, Deep Learning, and cutting-edge Generative AI technologies. I thrive at the crossroads of technology and creativity, where challenges transform into opportunities for impactful innovation. With over 2 years of experience, I have honed my technical and analytical skills, enabling me to excel in developing intelligent models, solving real-world problems, and creating value through data science. My journey includes exploring advanced analytics, predictive modeling, and state-of-the-art AI solutions to drive meaningful outcomes."
+}
+
+}
