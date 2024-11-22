@@ -3,10 +3,10 @@ import React from "react";
 import { FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
-import webchat from "/webchat.png";
-import flight from "/flight.png";
-import recipie from "/recipie.png";
-import movie from "/movie.png";
+import webchat from "../public/webchat.png";
+import flight from "../public/flight.png";
+import recipie from "../public/recipie.png";
+import movie from "../public/movie.png";
 
 import {
   FaPython,
