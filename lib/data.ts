@@ -3,9 +3,9 @@ import React from "react";
 import { FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
-const webchat = "/webchat.png";
+const webchat = "/w.png";
 const flight = "/flight.png";
-
+const recipie = "/r.png";
 const movie = "/movie.png";
 
 
@@ -117,7 +117,7 @@ export const projectsData = [
     description: `Developed a recipe chatbot leveraging Retrieval-Augmented Generation (RAG) and Gemini LLM for intelligent responses. The front end was designed using Streamlit, providing a user-friendly and interactive interface. `,
 
     tags: ["RAG", "Langchain","Streamlit","Gemini","Hugging Face","Vector DataBase"],
-    imageUrl: '/recipie.png',
+    imageUrl: recipie,
     projectUrl: "",
      
   },

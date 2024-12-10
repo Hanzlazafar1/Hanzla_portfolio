@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
-import { FiExternalLink } from "react-icons/fi";
 import { useLocale } from "next-intl";
 
 type ProjectProps = (typeof projectsData)[number];
@@ -14,11 +13,9 @@ type ProjectProps = (typeof projectsData)[number];
 export default function Project({
   title,
   description,
-
   tags,
   imageUrl,
   projectUrl,
-   
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,64 +33,41 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-5 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
-        <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
-          <div className="flex flex-col gap-3 items-start ">
-            <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
-              {title}
-            </h3>
+      <section className="bg-gray-100 max-w-full sm:max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative   transition-all duration-300 hover:shadow-lg dark:text-white dark:bg-white/10">
+        <div className="group pt-4 pb-7 px-2 sm:px-10  flex flex-col items-start gap-4  ">
+          <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
+            {title}
+          </h3>
 
-            <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">
-              {" "}
-              <Link
-                href={projectUrl}
-                target="_blank"
-                className="w-full flex items-center gap-1  hover:underline underline-offset-2"
-              >
-                <span className="break-keep">Code</span>
-
-                <FaGithubSquare className="w-5 h-5" />
-              </Link>
-              
-            </div>
-          </div>
-
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="text-gray-700 dark:text-white/70 leading-relaxed">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-auto gap-2">
+
+          <ul className="flex flex-wrap gap-2 mt-3">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
                 key={index}
+                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
               >
                 {tag}
               </li>
             ))}
           </ul>
+
+          <div className="mt-auto flex gap-4">
+            <Link
+              href={projectUrl}
+              target="_blank"
+              className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600 dark:hover:text-yellow hover:underline underline-offset-2"
+              aria-label="View project on GitHub"
+            >
+              <FaGithubSquare className="w-5 h-5" />
+              <span>Code</span>
+            </Link>
+          </div>
         </div>
-
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          width={300}
-          height={300}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
       </section>
     </motion.div>
   );
